@@ -6414,6 +6414,27 @@ public final class Settings {
                 new SettingsValidators.InclusiveIntegerRangeValidator(1, 5);
 
         /**
+         * Whether touch hovering is enabled on supported hardware
+         * @hide
+         */
+        public static final String FEATURE_TOUCH_HOVERING = "feature_touch_hovering";
+
+        /** @hide */
+        private static final Validator FEATURE_TOUCH_HOVERING_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Whether the HighTouchSensitivity is activated or not.
+         * 0 = off, 1 = on
+         */
+        public static final String HIGH_TOUCH_SENSITIVITY_ENABLE =
+                "high_touch_sensitivity_enable";
+
+        /** @hide */
+        private static final Validator HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -6812,6 +6833,8 @@ public final class Settings {
             PRIVATE_SETTINGS.add(FLASHLIGHT_ON_CALL);
             PRIVATE_SETTINGS.add(FLASHLIGHT_ON_CALL_IGNORE_DND);
             PRIVATE_SETTINGS.add(FLASHLIGHT_ON_CALL_RATE);
+            PRIVATE_SETTINGS.add(FEATURE_TOUCH_HOVERING);
+            PRIVATE_SETTINGS.add(HIGH_TOUCH_SENSITIVITY_ENABLE);
         }
 
         /**
@@ -7025,6 +7048,8 @@ public final class Settings {
             VALIDATORS.put(FLASHLIGHT_ON_CALL, FLASHLIGHT_ON_CALL_VALIDATOR);
             VALIDATORS.put(FLASHLIGHT_ON_CALL_IGNORE_DND, FLASHLIGHT_ON_CALL_IGNORE_DND_VALIDATOR);
             VALIDATORS.put(FLASHLIGHT_ON_CALL_RATE, FLASHLIGHT_ON_CALL_RATE_VALIDATOR);
+            VALIDATORS.put(FEATURE_TOUCH_HOVERING, FEATURE_TOUCH_HOVERING_VALIDATOR);
+            VALIDATORS.put(HIGH_TOUCH_SENSITIVITY_ENABLE, HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR);
         }
 
         /**
