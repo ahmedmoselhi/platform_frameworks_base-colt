@@ -6113,6 +6113,9 @@ public final class Settings {
          */
         public static final String SETTINGS_SPACER = "settings_spacer";
 
+       /** @hide */
+        public static final String OMNI_NAVIGATION_BAR_RECENTS = "navigation_bar_recents";
+
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
