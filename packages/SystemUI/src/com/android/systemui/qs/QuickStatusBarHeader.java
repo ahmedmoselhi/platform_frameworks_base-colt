@@ -524,7 +524,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         mHeaderTextContainerView.setLayoutParams(mHeaderTextContainerView.getLayoutParams());*/
 
         int topMargin = resources.getDimensionPixelSize(
-                com.android.internal.R.dimen.quick_qs_offset_height) + (mHeaderImageEnabled ?
+		R.dimen.colt_minimal_height) + (mHeaderImageEnabled ?
                 resources.getDimensionPixelSize(R.dimen.qs_header_image_offset) : 0);
 
         mSystemIconsView.getLayoutParams().height = topMargin;
@@ -535,7 +535,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
             lp.height = topMargin;
         } else {
             int qsHeight = resources.getDimensionPixelSize(
-                    com.android.internal.R.dimen.quick_qs_total_height);
+		    R.dimen.colt_minimal_height);
 
             if (mHeaderImageEnabled) {
                 qsHeight += resources.getDimensionPixelSize(R.dimen.qs_header_image_offset);

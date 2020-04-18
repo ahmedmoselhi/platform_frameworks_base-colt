@@ -136,7 +136,7 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
                 R.layout.qs_paged_tile_layout, this, false);
         mTileLayout.setListening(mListening);
         addView((View) mTileLayout);
-        updateSettings();
+        //updateSettings();
 
         mQsTileRevealController = new QSTileRevealController(mContext, this,
                 (PagedTileLayout) mTileLayout);
